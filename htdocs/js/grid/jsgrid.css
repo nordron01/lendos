@@ -1,0 +1,226 @@
+/*
+ * jsGrid v1.5.3 (http://js-grid.com)
+ * (c) 2016 Artem Tabalin
+ * Licensed under MIT (https://github.com/tabalinas/jsgrid/blob/master/LICENSE)
+ */
+
+.jsgrid {
+    position: relative;
+    overflow: hidden;
+    font-size: 10px;
+}
+
+.jsgrid, .jsgrid *, .jsgrid *:before, .jsgrid *:after {
+    box-sizing: border-box;
+}
+
+.jsgrid input,
+.jsgrid textarea,
+.jsgrid select {
+    font-size: 10px;
+}
+
+.jsgrid-grid-header {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.jsgrid-grid-body {
+    overflow-x: auto;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.jsgrid-table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.jsgrid-cell {
+    padding: 0.1em 0.1em;
+}
+
+.jsgrid-сell,
+.jsgrid-header-cell {
+    box-sizing: border-box;
+}
+
+.jsgrid-align-left {
+    text-align: left;
+}
+
+.jsgrid-align-center,
+.jsgrid-align-center input,
+.jsgrid-align-center textarea,
+.jsgrid-align-center select {
+    text-align: center;
+}
+
+.jsgrid-align-right,
+.jsgrid-align-right input,
+.jsgrid-align-right textarea,
+.jsgrid-align-right select {
+    text-align: right;
+}
+
+.jsgrid-header-cell {
+    padding: .1em .1em;
+}
+
+.jsgrid-filter-row input,
+.jsgrid-filter-row textarea,
+.jsgrid-filter-row select,
+.jsgrid-edit-row input,
+.jsgrid-edit-row textarea,
+.jsgrid-edit-row select,
+.jsgrid-insert-row input,
+.jsgrid-insert-row textarea,
+.jsgrid-insert-row select {
+    width: 100%;
+    padding: .3em .5em;
+}
+
+.jsgrid-filter-row input[type='checkbox'],
+.jsgrid-edit-row input[type='checkbox'],
+.jsgrid-insert-row input[type='checkbox'] {
+    width: auto;
+}
+
+
+.jsgrid-selected-row .jsgrid-cell {
+    cursor: pointer;
+}
+
+.jsgrid-nodata-row .jsgrid-cell {
+    padding: .1em 0;
+    text-align: center;
+}
+
+.jsgrid-header-sort {
+    cursor: pointer;
+}
+
+.jsgrid-pager {
+    padding: .5em 0;
+}
+
+.jsgrid-pager-nav-button {
+    padding: .2em .6em;
+}
+
+.jsgrid-pager-nav-inactive-button {
+    display: none;
+    pointer-events: none;
+}
+
+.jsgrid-pager-page {
+    padding: .2em .6em;
+}
+
+
+
+.ui-datepicker {
+  width: 216px;
+  height: auto;
+  margin: 5px auto 0;
+  font: 9pt Arial, sans-serif;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+}
+
+.ui-datepicker a {
+  text-decoration: none;
+}
+
+
+.ui-datepicker table {
+  width: 100%;
+  background-color: white;
+}
+
+
+.ui-datepicker-header {
+
+  color: #e0e0e0;
+  font-weight: bold;
+  -webkit-box-shadow: inset 0px 1px 1px 0px rgba(250, 250, 250, 2);
+  -moz-box-shadow: inset 0px 1px 1px 0px rgba(250, 250, 250, .2);
+  box-shadow: inset 0px 1px 1px 0px rgba(250, 250, 250, .2);
+  text-shadow: 1px -1px 0px #000;
+  filter: dropshadow(color=#000, offx=1, offy=-1);
+  line-height: 30px;
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  border-color: #111;
+}
+
+
+
+.ui-datepicker-title {
+  text-align: center;
+  background-color: white;
+}
+
+
+
+
+
+.ui-datepicker-prev, .ui-datepicker-next {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  cursor: pointer;
+  /*background-image: url('../img/arrow.png');
+  background-repeat: no-repeat;
+  */
+  background-color: red;
+  line-height: 600%;
+  overflow: hidden;
+}
+
+
+.ui-datepicker-prev {
+  float: left;
+  background-position: center -30px;
+}
+.ui-datepicker-next {
+  float: right;
+  background-position: center 0px;
+}
+s
+
+.ui-datepicker thead {
+  background-color: #f7f7f7;
+  background-image: -moz-linear-gradient(top,  #f7f7f7 0%, #f1f1f1 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(100%,#f1f1f1));
+  background-image: -webkit-linear-gradient(top,  #f7f7f7 0%,#f1f1f1 100%);
+  background-image: -o-linear-gradient(top,  #f7f7f7 0%,#f1f1f1 100%);
+  background-image: -ms-linear-gradient(top,  #f7f7f7 0%,#f1f1f1 100%);
+  background-image: linear-gradient(top,  #f7f7f7 0%,#f1f1f1 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#f1f1f1',GradientType=0 );
+  border-bottom: 1px solid #bbb;
+}
+
+.ui-datepicker th {
+  text-transform: uppercase;
+  font-size: 6pt;
+  padding: 5px 0;
+  color: #666666;
+  text-shadow: 1px 0px 0px #fff;
+  filter: dropshadow(color=#fff, offx=1, offy=0);
+}
+
+
+
+
+

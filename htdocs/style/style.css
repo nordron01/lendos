@@ -1,0 +1,297 @@
+/*
+@media (min-width: 900px) {
+    .header {
+        background-image: url(/imgs/j4nj-HW4i2M.jpg);
+        background-color: #111;
+        width: 1200px;
+        height: 500px;
+        background-repeat: no-repeat;
+    }
+    .blocks {
+        border: 3px solid black;
+        width: 100%;
+        height: 500px;
+        padding: auto;
+        margin: auto;
+    }
+    main {
+        display: grid;
+        grid-auto-rows: minmax(100px, auto);
+    }
+}
+
+
+
+
+
+
+
+.ui-draggable {
+    width: 100px;
+    height: 70px;
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+.ui-dialog {
+    background-color: #a1a1a1;
+}
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+/*@media only screen and (min-width: 1800px) { */
+
+
+    body {
+        background: #000;
+        position: relative;
+        margin: 0px;
+        padding: 0px;
+        font-family: sans-serif;
+    }
+
+    section {
+        width: 1800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+section.grid {
+    border: 2px solid white;
+    display: grid;
+    grid: 40px 600px 60px / 100px 70% 300px;
+    grid-auto-rows: 15px;
+    grid-auto-columns: 20px;
+    grid-gap: 12px 10px;
+
+}
+
+section header.grid {
+    background-color: green;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+section nav.grid {
+    background-color: red;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+section article.grid {
+    background-color: white;
+    border: 1px solid black;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+section aside.grid {
+    background-color: yellow;
+    grid-column: 3;
+    grid-row: 2;
+}
+
+section footer.grid {
+    background-color: blue;
+    grid-column: 2;
+    grid-row: 3;
+}
+.notable {
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    h3 {
+        color: white;
+    }
+
+    #chapter-one {
+        height: 935px;
+    }
+
+    .header {
+        background-image: url(/imgs/j4nj-HW4i2M.jpg);
+        background-color: #111;
+        width: 1800px;
+        height: 500px;
+        background-repeat: no-repeat;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #td1 {
+        background-image: url(/imgs/left.jpg);
+        width: 368px;
+        height: 955px;
+        background-repeat: no-repeat;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #sector2 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+
+    #td2 {
+        background-image: url(/imgs/lampa.png);
+        width: 527px;
+        height: 955px;
+        background-repeat: no-repeat;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #td3 {
+        background-image: url(/imgs/right.jpg);
+        width: 368px;
+        height: 955px;
+        background-repeat: no-repeat;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 73px;
+    }
+
+
+    .blocks {
+        border: 3px solid black;
+        width: 1800px;
+        height: 500px;
+        padding: auto;
+        margin: auto;
+    }
+
+    main {
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h1 {
+        color: white;
+    }
+
+    h2 {
+        color: white;
+    }
+
+    .buttonLi:link {
+        font-size: 24px;
+        font-color: white;
+
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .buttonLi:visited {
+        color: white;
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .buttonLi:hover {
+        /*border-bottom: 1px solid; */
+        color: #fffa05;
+        /*background-image: url(/imgs/par.png)*/
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .buttonLi:active {
+        font-color: white;
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .buttonLi:focus {
+        font-color: white;
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    #chapter-two {
+        background-image: url(/imgs/premium.JPG);
+        background-repeat: no-repeat;
+        margin-left: auto;
+        margin-right: auto;
+        height: 400px;
+    }
+
+    #chapter-three {
+        height: 1200px;
+        background-image: url(/imgs/OW5P0_FUrow.jpg);
+        background-repeat: no-repeat;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    #chapter-four {
+        background-image: url(/imgs/terrain.png);
+        background-repeat: no-repeat;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0
+    }
+    .navlil {
+        display: inline;
+        padding: 30px;
+    }
+    .navlil:hover {
+
+        color: #fffa05;
+        background-image: url(/imgs/par.png)/*#BAE498*/
+        ;
+        background-repeat: no-repeat;
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .foot {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+    }
+/*}*/

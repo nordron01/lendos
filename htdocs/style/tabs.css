@@ -1,0 +1,94 @@
+/* Áàçîâûé êîíòåéíåð òàáîâ */
+.tabs {
+  /*min-width: 320px;
+  max-width: 600px; */
+  padding: 0px;
+  
+  height: 760px;
+}
+
+section.tabs {
+  display: none;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #ddd;
+  width: 100%;
+  
+}
+input.tabs  {
+   display: none; 
+    margin: 0 auto;
+}
+
+.tabs label {
+  display: inline-block;
+  margin: auto;
+  font-weight: 600;
+  text-align: center;
+  color: #aaa;
+  border: 1px solid #ddd;
+  background: #f1f1f1;
+  border-radius: 3px 3px 0 0;
+  width: 140px;
+      height: 40px;
+  
+}
+
+.tabs label:before {
+  font-family: fontawesome;
+  font-weight: normal;
+  margin-right: 10px;
+}
+.tabs label[for*="1"]:before {
+ 
+}
+.tabs label[for*="2"]:before {
+  }
+.tabs label[for*="3"]:before {
+ 
+}
+.tabs label[for*="4"]:before {
+  /*url(http://img-fotki.yandex.ru/get/5413/5091629.67/0_5ba12_81d03a82_XS.png); */
+}
+.tabs label[for*="5"]:before {
+  /*content: "\2603"; url(http://img-fotki.yandex.ru/get/5413/5091629.67/0_5ba12_81d03a82_XS.png); */
+}
+
+
+
+.tabs label:hover {
+  color: #888;
+  cursor: pointer;
+}
+
+.tabs input:checked + label {
+  color: #555;
+  border: 1px solid #ddd;
+  border-top: 1px solid #009933;
+  border-bottom: 1px solid #fff;
+  background: #fff;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4,
+#tab5:checked ~ #content5 {
+  display: block;
+}
+/* ìåäèà çàïðîñû äëÿ ðàçëè÷íûõ òèïîâ íîñèòåëåé */  
+@media screen and (max-width: 680px) {
+  .tabs label {
+    font-size: 0;
+  }
+ 
+  .tabs label:before {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .tabs label {
+    padding: 15px;
+  }
+}

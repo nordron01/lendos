@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Отчёты </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="robots" content="noyaca">
+    <meta name="keywords" content="nordron01">
+    <!-- css -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="/style/style2.css" rel="stylesheet" type="text/css">
+    <link href="/style/tabs.css" rel="stylesheet" type="text/css" />
+    <!-- css -->
+    <!-- JS  -->
+    <script src="js/jquery-3.1.1.min.js">
+    </script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery-ui-1.12.1.custom/jquery-ui.min.js">
+    </script>
+    <script src="js/socket.io-2.0.1.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/accountant.js"></script>
+    <!-- JS  -->
+    <!--  grid time -->
+    <!-- <script type="text/javascript" src="js/grid/jsgrid.min.js"></script> -->
+    <script type="text/javascript" src="js/grid/jsgrid.js"></script>
+    <!--  grid time -->
+</head>
+
+<body id="body">
+    <!--<button class="open_window" id="strv"> Open </button> -->
+    <!--
+  <div class="popup">
+  
+  </div>
+ -->
+ <!--
+    <div class="">
+        <input type="text" id="search_item" class="shorting">
+        <select id="select_items" class="shorting" tabindex="-1">
+            <option value="0">Select one...</option>
+            <option value="1">Провести</option>
+            <option value="2">Проведена</option>
+            <option value="3">Перенесена</option>
+            <option value="4">Отмена</option>
+            <option value="5">Заболел</option>
+            <option value="6">Командировка</option>
+        </select>
+    </div>
+  -->
+<!--
+    <div class="contr" id='loginform'>
+        <div class="form">
+            <h1> Расписание учебного процесса </h1>
+            <div class="logmenu" id="login_from">
+                <h2> Пройдите авторизацию </h2>
+                <h3 class="title" id="scroller2"> Логин </h3>
+                <input class="t" id="usernameInput" type="text" maxlength="14" value="" required/>
+                <BR>
+                <h3 class="title" id="scroller3"> Пароль</h3>
+                <input class="t" id="passnameInput" type="password" maxlength="14" value="" required/>
+                <br>
+                <button id="login">Войти</button>
+                <button id="registration">Регистрация</button>
+                <br>
+            </div>
+       <div class="logmenu" id="student_form" style="display: none;">
+                <table class="reg_form_table">
+                    <tr>
+                        <td><b>Вы</b> </td>
+                        <td>
+                            <select id="reg_form_type" class="standart_select">
+                                <option value="student">Студент</option>
+                                <option value="teachers">Сотрудник</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b> Логин </b></td>
+                        <td>
+                            <input class="t" type="text" required name="name" placeholder="Ivanov54512" id="reglogin">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Пароль</b></td>
+                        <td>
+                            <input class="t" type="password" required name="password" placeholder="********" id="regpswd">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Пароль ещё</b></td>
+                        <td>
+                            <input class="t" type="password" required name="password" placeholder="********" id="regpswd1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Фамилия</b></td>
+                        <td>
+                            <input class="t" type="text" required name="name" placeholder="Иванов" id="reg_lastname">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Имя</b></td>
+                        <td>
+                            <input class="t" type="text" required name="name" placeholder="Иван" id="reg_name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Отчество</b></td>
+                        <td>
+                            <input class="t" type="text" required name="name" placeholder="Иванович" id="reg_othername">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b> Уникальный код </b></td>
+                        <td>
+                            <input class="t" type="text" name="name" placeholder="qqqdfsd123as" id="unique_key">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button id="loginin"> Войти </button>
+                        </td>
+                        <td>
+                            <button id="reg"> Зарегистрироваться </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+  -->
+
+
+
+    <div style="display: block" id="menus">
+        <div class="tabs" id="tabs" style="display: block;">
+            <input id="tab1" type="radio" name="tabs" checked class="tabs">
+            <label for="tab1" id="stl_label" title="Нагрузка">
+                </i> Табаки </label>
+            <input id="tab2" type="radio" name="tabs" class="tabs">
+            <label for="tab2" id="stl_label" title=""> Склад </label>
+            <input id="tab3" type="radio" name="tabs" class="tabs">
+            <label for="tab3" id="stl_label" title=""> Заказы </label>
+            <input id="tab4" type="radio" name="tabs" class="tabs">
+            <label for="tab4" id="stl_label" title=""> Заказ </label>
+            <!--   <input id="tab5" type="radio" name="tabs" class="tabs">
+                <label for="tab5" id="stl_label" title="Вкладка 5" >    Магазин </label> -->
+            <section id="content1" class="tabs">
+                <div class="all" id="alllog" style="display: block;">
+                    <div class="shapka">
+                        <h3> Табаки </h3>
+                    </div>
+                </div>
+                <div class="config-panel">
+                    <label>
+                        <input id="heading" type="checkbox" checked /> Заголовки </label>
+                    <label>
+                        <input id="filtering" type="checkbox" checked /> Поиск </label>
+                    <label>
+                        <input id="inserting" type="checkbox" /> Вставить </label>
+                    <label>
+                        <input id="editing" type="checkbox" /> Править </label>
+                    <label>
+                        <input id="paging" type="checkbox" /> Постранично </label>
+                    <label>
+                        <input id="sorting" type="checkbox" /> Сортировка</label>
+                    <button id="resfresh_load"> Обновить </button>
+                    <button id="row_is_column"> Нагрузка </button>
+                    <!--  <button id="proverka"> Проверка </button>-->
+                    <!--<label><input id="selecting" type="checkbox" checked /> Selecting</label>-->
+                </div>
+                <div id="jsGrid_Load"></div>
+            </section>
+
+            <section id="content2" class="tabs">
+                <div class="shapka">
+                    <h3> Склад </h3>
+                </div>
+                <div class="config-panel2">
+                    <label>
+                        <input id="heading" type="checkbox" checked /> Заголовки </label>
+                    <label>
+                        <input id="filtering" type="checkbox" checked /> Поиск </label>
+                    <label>
+                        <input id="inserting" type="checkbox" /> Вставить </label>
+                    <label>
+                        <input id="editing" type="checkbox" /> Править </label>
+                    <label>
+                        <input id="paging" type="checkbox" /> Постранично </label>
+                    <label>
+                        <input id="sorting" type="checkbox" /> Сортировка</label>
+                    <!--<label><input id="selecting" type="checkbox" checked /> Selecting</label>-->
+                </div>
+                <div id="jsGrid_Sklad"></div>
+            </section>
+
+            <section id="content3" class="tabs">
+                <div class="shapka">
+                    <h3> Заказы </h3>
+                </div>
+                <div class="config-panel3">
+                    <label>
+                        <input id="heading" type="checkbox" checked /> Заголовки </label>
+                    <label>
+                        <input id="filtering" type="checkbox" checked/> Поиск </label>
+                    <label>
+                        <input id="inserting" type="checkbox" /> Вставить </label>
+                    <label>
+                        <input id="editing" type="checkbox" /> Править </label>
+                    <label>
+                        <input id="paging" type="checkbox" /> Постранично </label>
+                    <label>
+                        <input id="sorting" type="checkbox" /> Сортировка</label>
+                    <!--<label><input id="selecting" type="checkbox" checked /> Selecting</label>-->
+                </div>
+                <div id="jsGrid_Desktop_order"></div>
+            </section>
+
+            
+            <section id="content4" class="tabs">
+                <div class="config-panel4">
+                    <label>
+                        <input id="heading" type="checkbox" checked /> Заголовки </label>
+                    <label>
+                        <input id="filtering" type="checkbox" checked /> Поиск </label>
+                    <label>
+                        <input id="inserting" type="checkbox" /> Вставить </label>
+                    <label>
+                        <input id="editing" type="checkbox" /> Править </label>
+                    <label>
+                        <input id="paging" type="checkbox" /> Постранично </label>
+                    <label>
+                        <input id="sorting" type="checkbox" /> Сортировка</label>
+                    <!--<label><input id="selecting" type="checkbox" checked /> Selecting</label>-->
+                </div>
+                <div id="jsGrid_order_position"></div>
+            </section>
+            <!--  <section id="content5" class="tabs">
+              </section>  -->
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

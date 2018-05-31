@@ -1,0 +1,103 @@
+<html lang="ru">
+
+<head>
+    <title>Две Четвёртых - Кальянное пространство</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    </style>
+    <meta name="description" content="Две Четвёртых - Кальянное пространство">
+    <meta name="robots" content="all">
+    <meta name="keywords" content="nordron01,Кальян,Afzal,Al Facker, Fumari, Dark Side,Tangiers,Nakhla,Buta,Serbeli,Hookan,Tobacco" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="/style/style.css" rel="stylesheet" type="text/css">
+    <!--<link href="/style/tabs.css" rel="stylesheet" type="text/css" />
+<link href="/style/game/css/game-icons-font.css" rel="stylesheet" type="text/css" />
+ css -->
+    <!-- JS  -->
+    <script src="js/jquery-3.1.1.min.js">
+    </script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery-ui-1.12.1.custom/jquery-ui.min.js">
+    </script>
+
+    <!-- <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script> -->
+    <script src="js/socket.io-2.0.1.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/dragdesktop.js"></script>
+</head>
+
+<body id="body">
+
+	<!--<input type="text" name="" class="name_desk">-->
+	<input type="button" name="socket" id="socket" value="socket"/>
+    <div class="grid-container">
+        <section class="grid">
+            <header class="grid">Title</header>
+            <nav class="grid">
+            	Menu
+            	<button id="create_desk">
+            		Создать стол
+            	</button><br>
+            	<button>
+            		Заказы
+            	</button><br>
+            	<button>
+            		Отчёты
+            	</button>
+
+                
+            </nav>
+            <article class="grid" id="pile" ></article>
+
+            <aside class="grid">Notes</aside>
+            <footer class="grid">Footer</footer>
+        </section>
+    </div>
+
+
+
+
+<div id="dialog-form" title="Добавление  в заказ">
+  <p class="validateTips">Добавить нужные позиции в заказ</p>
+ 
+  <form    class="form_desktop">
+    
+    <select id="select_items" class="shorting" tabindex="-1">
+    <option value="0">Выберите</option>
+    <option value="1">Кальян</option>
+    <option value="2">Кофе</option>
+    <option value="3">Чай</option>
+    <option value="4">Газировка</option>
+    <!--<option value="4">Отмена</option>
+    <option value="5">Заболел</option>
+   <option value="6">Командировка</option>-->
+  	</select>
+
+     
+ 
+      <!-- Allow form submission with keyboard without duplicating the dialog button -->
+      <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+    
+  </form>
+</div>
+
+<div id="result-form" title="Заказ">
+  <p class="validateTips">Добавить нужные позиции в заказ</p>
+ 
+  <form    class="form_desktop_res">
+          
+ 
+            <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+    
+  </form>
+</div>
+
+
+
+
+
+
+
+</body>
+
+</html>
